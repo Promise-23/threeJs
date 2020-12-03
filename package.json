@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "sass-loader": "^10.1.0",
+    "swiper": "5.x",
+    "three": "^0.122.0",
+    "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
