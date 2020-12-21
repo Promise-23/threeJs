@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+
+    }
+
+    body {
+      background: greenyellow;
+    }
+
+    #test {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: gray;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="test" width="300" height="300">
+    <span>您的浏览器不支持画布元素 请您换成萌萌的谷歌</span>
+  </canvas>
+</body>
+<script type="text/javascript">
+  window.onload = function () {
+    var canvas = document.querySelector("#test");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+      var img = new Image();
+      img.src = "img/border.jpg";
+      img.onload = function () {
+        draw();
+      }
+
+      function draw() {
+        var pattern = ctx.createPattern(img, "no-repeat") //不加；号
+        ctx.fillStyle = pattern;
+        ctx.fillRect(0, 0, 300, 300);
+      }
+
+    }
+  }
+</script>
+
+</html>
